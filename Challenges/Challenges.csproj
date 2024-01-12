@@ -85,6 +85,7 @@
     <Compile Include="API\ChallengesAPI.cs" />
     <Compile Include="API\Enums\ChallengeType.cs" />
     <Compile Include="API\Extensions\PlayerExtension.cs" />
+    <Compile Include="API\Extensions\StringExtension.cs" />
     <Compile Include="API\Features\Challenges\Challenge.cs" />
     <Compile Include="API\Features\Challenges\EscapeChallenge.cs" />
     <Compile Include="API\Features\Challenges\KillChallenge.cs" />

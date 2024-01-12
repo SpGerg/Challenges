@@ -16,6 +16,9 @@ namespace Challenges
         [Description("Challenge complete message")]
         public string ChallengeComplete { get; set; } = "You complete %challenge_name%!\n Awards: %challenge_awards%";
 
+        [Description("Challenge complete message")]
+        public string NewChallenge { get; set; } = "Challenge for you: %challenge_name%: %challenge_description%";
+
         [Description("Challenges display name, display description and awards")]
         public Dictionary<API.Enums.ChallengeType, ChallengeSerializable> Challenges { get; set; } = new Dictionary<API.Enums.ChallengeType, ChallengeSerializable>()
         {

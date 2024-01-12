@@ -31,8 +31,8 @@ namespace Challenges.API.Extensions
 
             if (isWithMessage)
             {
-                player.Broadcast(2, $"Challenge for you: {challenge.Description}");
-                player.SendConsoleMessage($"Challenge for you: {challenge.Description}", "default");
+                player.Broadcast(2, Plugin.Instance.Config.NewChallenge.SetPlaceholders(challenge));
+                player.SendConsoleMessage(Plugin.Instance.Config.NewChallenge.SetPlaceholders(challenge), "default");
             }
         }
 
@@ -44,7 +44,7 @@ namespace Challenges.API.Extensions
 
             if (isWithMessage)
             {
-                var message = Plugin.Instance.Config.ChallengeComplete.Replace("%challenge_name%", challenge.Name).Replace("%challenge_awards%", string.Concat(challenge.Awards));
+                var message = Plugin.Instance.Config.ChallengeComplete.SetPlaceholders(challenge);
 
                 player.Broadcast(2, message);
             }
