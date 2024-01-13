@@ -12,7 +12,7 @@ namespace Challenges.API.Features.Challenges
 
         public override bool OnChallengeSelected(Player player)
         {
-            return !player.IsNTF && !player.IsCHI;
+            return !player.IsNTF && !player.IsCHI && !player.IsScp && player.Role.Type is not PlayerRoles.RoleTypeId.Spectator;
         }
     }
 }

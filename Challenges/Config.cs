@@ -1,5 +1,6 @@
 ﻿using Challenges.API.Features.Serializable;
 using Exiled.API.Interfaces;
+using PlayerRoles;
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -12,6 +13,12 @@ namespace Challenges
 
         [Description("Is debug or not")]
         public bool Debug { get; set; }
+
+        [Description("Roles who can have challenges")]
+        public RoleTypeId[] RolesCanHaveChallenges { get; set; }
+
+        [Description("Is all roles can have challenge")]
+        public bool IsAllRolesCanHaveChallenge { get; set; }
 
         [Description("Challenge complete message")]
         public string ChallengeComplete { get; set; } = "You complete %challenge_name%!\n Awards: %challenge_awards%";

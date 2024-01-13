@@ -22,6 +22,11 @@ namespace Challenges.Events.Player
 
             player.GetChallenges().Clear();
 
+            if (!Plugin.Instance.Config.IsAllRolesCanHaveChallenge && !Plugin.Instance.Config.RolesCanHaveChallenges.Contains(ev.Player.Role.Type))
+            {
+                return;
+            }
+
             player.AddRandomChallenge();
         }
     }
